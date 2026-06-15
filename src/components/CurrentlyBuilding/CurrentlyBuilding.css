@@ -1,0 +1,103 @@
+#currently-building {
+  background: var(--terminal-bg);
+  color: var(--terminal-text);
+}
+
+.wip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.wip-card {
+  background: var(--terminal-surface);
+  border: 1px solid var(--terminal-border);
+  border-left: 2px solid var(--terminal-green-dim);
+  padding: 1.5rem;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.wip-name {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--terminal-text);
+  letter-spacing: -0.04em;
+}
+
+.status {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 2px 6px;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+
+.status.in-progress {
+  color: var(--terminal-green);
+}
+
+.status.shipped {
+  color: var(--terminal-green-dim);
+}
+
+.status.next {
+  color: var(--terminal-muted);
+}
+
+
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+.wip-desc {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--terminal-text);
+  line-height: 1.6;
+}
+
+.wip-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tech-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 2px 6px;
+  background: transparent;
+  border: 1px solid var(--terminal-border);
+  color: var(--terminal-muted);
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+}
+
+@media (max-width: 1024px) {
+  .wip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,84 @@
+#about {
+  background: var(--terminal-bg);
+  color: var(--terminal-text);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-text {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--terminal-text);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-text p {
+  margin: 0;
+}
+
+.about-whois {
+  font-family: var(--mono);
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.whois-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.whois-label {
+  color: var(--terminal-muted);
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+}
+
+.whois-value {
+  color: var(--terminal-text);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.status-open {
+  color: var(--terminal-green);
+  font-weight: 500;
+}
+
+.status-dot {
+  color: var(--terminal-green);
+  animation: blink 1s infinite;
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+
+
+
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .whois-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .whois-label {
+    display: block;
+  }
+}
+
