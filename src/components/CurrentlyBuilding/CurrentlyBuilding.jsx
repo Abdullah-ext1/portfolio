@@ -20,7 +20,7 @@ export const CurrentlyBuilding = () => {
 
   return (
     <section id="currently-building">
-      <div className="section-label dark">$ ls ~/wip</div>
+      <div className="section-label dark">$ ls ~/work in progress</div>
 
       <div className="wip-grid" ref={ref}>
         {wipProjects.map((project) => (

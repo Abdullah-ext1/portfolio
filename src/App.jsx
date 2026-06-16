@@ -19,12 +19,12 @@ export function App() {
       <Hero />
       <Projects />
       <CurrentlyBuilding />
-      <Process />
+      <Skills />
       <Experience />
       <Certifications />
-      <Blog />
-      <Skills />
       <About />
+      <Process />
+      <Blog />
       <Contact />
       <Footer />
     </>
