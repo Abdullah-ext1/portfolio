@@ -58,6 +58,50 @@ const projects = [
       "/screenshots/twoate-2.png",
       "/screenshots/twoate-3.png",
     ]
+  },
+  {
+    name: "Clinicians",
+    eyebrow: "AI · Healthcare",
+    featured: false,
+    metric: "AI-powered · ideathon build",
+    desc: "Real-time clinical transcription tool with SOAP note generation, diagnosis and prescription extraction. Built for healthcare workflows — doctors speak, the app writes.",
+    tech: ["React", "Node.js", "OpenAI API", "MongoDB", "Express"],
+    live: "https://clinicians.vercel.app/",
+    github: "https://github.com/Abdullah-ext1/Clinicians",
+    screenshots: []
+  },
+  {
+    name: "DataVista",
+    eyebrow: "Data · Hackathon",
+    featured: false,
+    metric: "Built at TechNext 2025",
+    desc: "Data pipeline and visualization project built at TechNext Minithon 2025. Transforms raw datasets into interactive visual dashboards.",
+    tech: ["React", "Node.js", "MongoDB", "Express", "Chart.js"],
+    live: "https://datavistaminithon.vercel.app/",
+    github: "https://github.com/Abdullah-ext1/DataVista",
+    screenshots: []
+  },
+  {
+    name: "Weather Web App",
+    eyebrow: "Utility · API",
+    featured: false,
+    metric: "Live weather data",
+    desc: "Real-time weather app pulling live data from a weather API. Clean UI showing temperature, conditions, humidity, and forecasts by city.",
+    tech: ["React", "Weather API", "CSS"],
+    live: null,
+    github: "https://github.com/Abdullah-ext1/Weather-Web-App",
+    screenshots: []
+  },
+  {
+    name: "Landing Page",
+    eyebrow: "Frontend · Client",
+    featured: false,
+    metric: "Production UI",
+    desc: "Pixel-perfect responsive landing page with scroll animations, clean layout, and production-ready frontend code.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    live: null,
+    github: "https://github.com/Abdullah-ext1/Landing-page",
+    screenshots: []
   }
 ]
 
