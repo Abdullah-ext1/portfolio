@@ -1,0 +1,131 @@
+#certifications {
+  background: var(--paper-bg);
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cert-card {
+  background: var(--paper-surface);
+  border: 1px solid var(--paper-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.cert-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--paper-border);
+  display: block;
+  cursor: pointer;
+}
+
+.cert-image-placeholder {
+  height: 180px;
+  background: var(--paper-bg);
+  border-bottom: 1px solid var(--paper-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-placeholder-text {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--paper-muted);
+}
+
+.cert-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cert-name {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--paper-text);
+  letter-spacing: -0.02em;
+}
+
+.cert-issuer {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--paper-muted);
+}
+
+.cert-date {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--paper-muted);
+}
+
+.cert-verify {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent-paper);
+  margin-top: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.cert-verify:hover {
+  color: var(--paper-text);
+}
+
+.cert-participation {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--paper-muted);
+  margin-top: 0.25rem;
+}
+
+.cert-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--terminal-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 2px;
+  cursor: default;
+}
+
+@media (max-width: 1024px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
