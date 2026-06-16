@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react'
 
-export const useReveal = () => {
+const EMPTY_DEPS = []
+
+export const useReveal = (deps = EMPTY_DEPS) => {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -19,11 +21,10 @@ export const useReveal = () => {
     const observedElements = []
 
     if (ref.current) {
-      if (ref.current.classList.contains('reveal')) {
+      if (ref.current.classList.contains('reveal') && !ref.current.classList.contains('visible')) {
         observedElements.push(ref.current)
       }
-      const children = ref.current.querySelectorAll('.reveal')
-      children.forEach((child) => {
+      ref.current.querySelectorAll('.reveal:not(.visible)').forEach((child) => {
         observedElements.push(child)
       })
 
@@ -35,7 +36,7 @@ export const useReveal = () => {
         observer.unobserve(el)
       })
     }
-  }, [])
+  }, deps)
 
   return ref
 }

@@ -176,9 +176,9 @@ const ProjectCard = ({ project, isFeatured, isOpen, onToggle }) => {
 }
 
 export const Projects = () => {
-  const ref = useReveal()
   const [openProject, setOpenProject] = useState(null)
   const [showAll, setShowAll] = useState(false)
+  const ref = useReveal([showAll])
 
   const handleToggle = (name) => {
     setOpenProject((prev) => (prev === name ? null : name))

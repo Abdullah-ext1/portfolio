@@ -61,29 +61,33 @@
   display: flex;
   align-items: baseline;
   width: 100%;
+  min-width: 0;
+  gap: 0.5rem;
 }
 
 .stat-label {
   color: var(--terminal-text);
   font-weight: 400;
+  flex-shrink: 0;
 }
 
 .stat-dots {
   color: var(--terminal-muted);
   font-weight: 400;
   flex: 1;
+  min-width: 0;
   overflow: hidden;
   white-space: nowrap;
-  margin: 0 0.5rem;
 }
 
 .stat-dots::after {
-  content: '····················································································';
+  content: '················································· ';
 }
 
 .stat-value {
   color: var(--terminal-green);
   font-weight: 500;
+  flex-shrink: 0;
 }
 
 .hero-cta {
@@ -133,18 +137,29 @@
 
 @media (max-width: 768px) {
   #hero {
-    padding: 6rem 1.5rem 4rem;
-    justify-content: flex-end;
-    min-height: 80vh;
+    padding: 5rem 1.5rem 3rem;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .hero-prompt {
+    margin-bottom: 2rem;
   }
 
   .hero-name {
     margin-bottom: 1.5rem;
+    font-size: clamp(40px, 12vw, 64px);
+  }
+
+  .hero-output {
+    margin-bottom: 1.5rem;
+    font-size: 12px;
   }
 
   .hero-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
     margin-bottom: 2rem;
   }
 
