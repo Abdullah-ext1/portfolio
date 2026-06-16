@@ -33,7 +33,7 @@ export const Hero = () => {
         <div className="stat">
           <span className="stat-label">projects</span>
           <span className="stat-dots"></span>
-          <span className="stat-value">4 live</span>
+          <span className="stat-value">8+ live</span>
         </div>
         <div className="stat">
           <span className="stat-label">cgpa</span>
